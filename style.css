@@ -1,0 +1,144 @@
+/* global settings */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+:root {
+  --violetBlue: #af81c9;
+  --redOrange: #f89a7e;
+  --orange: #f2ca85;
+  --pictonBlue: #54d1f1;
+  --deluge: #7c71ad;
+  --fiord: #445569;
+}
+
+*::selection {
+  background-color: var(--pictonBlue);
+}
+
+/* display settings */
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* add comment and input styling*/
+
+.input-user {
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+
+#comment-from-user {
+  color: white;
+  font-size: 2rem;
+  width: 40rem;
+  height: 3rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  background: var(--fiord);
+  border: 1rem solid var(--violetBlue);
+}
+
+#comment-from-user::placeholder {
+  font-weight: bolder;
+  color: white;
+}
+
+#comment-from-user:focus {
+  background-color: var(--pictonBlue);
+  border: 1rem solid var(--violetBlue);
+  outline: none;
+}
+
+#btn-add {
+  background-color: var(--violetBlue);
+  margin-left: 3rem;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: 1.5rem 0.5rem 0.3rem 0.1rem #445569dd;
+  cursor: pointer;
+}
+
+#btn-add:hover {
+  background-color: var(--pictonBlue);
+}
+
+#btn-add:active {
+  background-color: var(--pictonBlue);
+  box-shadow: 0 0 0 0;
+  transform: translate(1.5rem, 0.5rem);
+}
+
+/* display comments styling */
+#show-comments {
+  background-color: var(--redOrange);
+  border: 1rem solid var(--violetBlue);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.all-items {
+  display: flex;
+  width: 75vw;
+  border: 1rem solid var(--deluge);
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+.div-img {
+  margin-right: 5rem;
+}
+
+img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.h3-email {
+  color: white;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+.p-comment {
+  color: var(--fiord);
+  font-family: inherit;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.delete-btn {
+  background-color: #e55b7f;
+  margin-left: 3rem;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 0.3rem 0.1rem #445569dd;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: var(--pictonBlue);
+}
+
+.delete-btn:active {
+  background-color: var(--pictonBlue);
+  box-shadow: 0 0 0 0;
+  transform: translate(0.5rem, 0.5rem);
+}
