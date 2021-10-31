@@ -6,7 +6,7 @@ Task:
 
 2. Adaugarea de comment.
 
-3.Stergerea de comments.
+3. Stergerea de comments.
 
 4. Explicatile le gasiti in pdf atasat.
 
