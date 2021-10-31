@@ -1,12 +1,16 @@
 # Comment-Box-SIIT
 
-Se vor afisa comments.
+Task:
 
-Adaugarea de comment.
+1. Se vor afisa comments.
 
-Stergerea de comments.
+2. Adaugarea de comment.
 
-Explicatile le gasiti in pdf atasat.
+3.Stergerea de comments.
+
+4. Explicatile le gasiti in pdf atasat.
+
+
 
 Preview:
 
