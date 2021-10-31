@@ -10,7 +10,7 @@ Task:
 
 4. Explicatile le gasiti in pdf atasat.
 
-
+===========================================
 
 Preview:
 
