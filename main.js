@@ -13,15 +13,22 @@ let i = 0;
 
 // Functions
 
-function displayComments(){
+btnAdd.addEventListener('click', addBtn)
 
-}
 
-btnAdd.addEventListener('click', function addBtn(){
-  const createParagraf = document.createElement('p');
+function addBtn(){
+
+  // Control Empty input
+  if(validateInput(inputTextUser.value) === false){
+    alert('Empty comment!!!')
+    return;
+  }
+
+
+  const createParagraph = document.createElement('p');
   const createProfilePic = document.createElement('img');
   const createEmailH3 = document.createElement('h3');
-  const createDelelteBtn = document.createElement('button');
+  const createDeleteBtn = document.createElement('button');
   const createDivForFlex = document.createElement('div');
   const createDivforAllItems = document.createElement('div');
   const createDivforImg = document.createElement('div');
@@ -41,7 +48,7 @@ btnAdd.addEventListener('click', function addBtn(){
   createDivforImg.append(createProfilePic);
 
   // div for flex to append email text and delete btn
-  createDivForFlex.classList.add('div-h2-paragraf-btn');
+  createDivForFlex.classList.add('div-h2-paragraph-btn');
   createDivforAllItems.append(createDivForFlex);
 
   // email adding with H3
@@ -50,23 +57,43 @@ btnAdd.addEventListener('click', function addBtn(){
   createDivForFlex.append(createEmailH3);
 
   // comments adding
-  createParagraf.innerText = inputTextUser.value;
-  createParagraf.classList.add('p-comment');
-  createDivForFlex.append(createParagraf);
+  createParagraph.innerText = inputTextUser.value;
+  createParagraph.classList.add('p-comment');
+  createDivForFlex.append(createParagraph);
 
   // delete btn adding 
-  createDelelteBtn.innerHTML = 'Delete';
-  createDelelteBtn.classList.add('delete-btn');
-  createDelelteBtn.setAttribute('id', i);
-  // createDelelteBtn.setAttribute('onclick', 'deleteComment()');
-  createDivForFlex.append(createDelelteBtn);
+  createDeleteBtn.innerHTML = 'Delete';
+  createDeleteBtn.classList.add('delete-btn');
+  createDeleteBtn.setAttribute('id', i);
+  createDivForFlex.append(createDeleteBtn);
 
 
-  createDelelteBtn.addEventListener('click', function(){
+  createDeleteBtn.addEventListener('click', function(){
     let key  = this.getAttribute('id');
     document.getElementById('item' + key).remove();
+    i--;
+    if(i == 0){
+      parentForComments.style.visibility = 'hidden';
+    }
   })
 
-  i++
-})
+  i++;
 
+  // Control visibility of div parent
+  if(i > 0){
+    parentForComments.style.visibility = 'visible';
+  }
+
+  // Clear input
+  inputTextUser.value = '';
+}
+
+
+function validateInput(userInput) {
+  if(userInput === '') {
+    return false
+  }
+  else {
+    return true
+  }
+}

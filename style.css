@@ -32,6 +32,18 @@ body {
 
 /* add comment and input styling*/
 
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
 .input-user {
   margin-top: 5%;
   margin-bottom: 7%;
@@ -88,6 +100,7 @@ body {
   border: 1rem solid var(--violetBlue);
   border-radius: 1rem;
   padding: 2rem;
+  visibility: hidden;
 }
 
 .all-items {
