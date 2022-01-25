@@ -1,20 +1,13 @@
 // DOM stuff
-
 const btnAdd = document.querySelector('#btn-add');
 const inputTextUser = document.querySelector('#comment-from-user');
 const parentForComments = document.getElementById('show-comments');
 
-
 // counters
-
 let i = 0;
 
-
-
 // Functions
-
 btnAdd.addEventListener('click', addBtn)
-
 
 function addBtn(){
 
@@ -23,7 +16,6 @@ function addBtn(){
     alert('Empty comment!!!')
     return;
   }
-
 
   const createParagraph = document.createElement('p');
   const createProfilePic = document.createElement('img');
@@ -52,7 +44,7 @@ function addBtn(){
   createDivforAllItems.append(createDivForFlex);
 
   // email adding with H3
-  createEmailH3.innerHTML = 'blabla@gmail.com';
+  createEmailH3.innerHTML = 'emailUser@mail.com';
   createEmailH3.classList.add('h3-email');
   createDivForFlex.append(createEmailH3);
 
@@ -66,7 +58,6 @@ function addBtn(){
   createDeleteBtn.classList.add('delete-btn');
   createDeleteBtn.setAttribute('id', i);
   createDivForFlex.append(createDeleteBtn);
-
 
   createDeleteBtn.addEventListener('click', function(){
     let key  = this.getAttribute('id');
@@ -87,7 +78,6 @@ function addBtn(){
   // Clear input
   inputTextUser.value = '';
 }
-
 
 function validateInput(userInput) {
   if(userInput === '') {

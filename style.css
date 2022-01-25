@@ -6,58 +6,74 @@ html {
 }
 
 :root {
-  --violetBlue: #af81c9;
-  --redOrange: #f89a7e;
-  --orange: #f2ca85;
-  --pictonBlue: #54d1f1;
-  --deluge: #7c71ad;
-  --fiord: #445569;
+  --main-color:#6495ED;
+  --blackChoclate: #1B1811;
+  --second-color: #aaaaaaaa;
 }
 
 *::selection {
-  background-color: var(--pictonBlue);
+  background-color: var(--blackChoclate);
 }
 
 /* display settings */
 
 body {
   margin: 0;
-  height: 100vh;
+  /* height: auto; */
   font-family: "Montserrat", sans-serif;
-  background-color: var(--orange);
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* add comment and input styling*/
+/* header */
+header {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--main-color);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+#icon {
+  background-image: url('./logo.png');
+  filter: grayscale(0.5);
+  background-color: white;
+  border-radius: 50%;
+  height: 8vh;
+  width: 8vh;
+  margin-left: 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
 
 h2 {
-  font-size: 3rem;
-  font-weight: bold;
+  text-align: center;
+  margin: 2vh 0 0 110%;
   color: white;
+  font-size: 2rem;
 }
 
-h3 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-}
+/* add comment and input styling*/
 
 .input-user {
   margin-top: 5%;
-  margin-bottom: 7%;
+  margin-bottom: 5%;
+  display: flex;
 }
 
 #comment-from-user {
   color: white;
   font-size: 2rem;
-  width: 40rem;
-  height: 3rem;
+  width: 80%;
   border-radius: 2rem;
   padding: 1rem;
-  background: var(--fiord);
-  border: 1rem solid var(--violetBlue);
+  background: var(--second-color);
+  border: .5rem solid var(--main-color);
 }
 
 #comment-from-user::placeholder {
@@ -66,15 +82,15 @@ h3 {
 }
 
 #comment-from-user:focus {
-  background-color: var(--pictonBlue);
-  border: 1rem solid var(--violetBlue);
+  background-color: var(--blackChoclate);
+  border: .5rem solid var(--main-color);
   outline: none;
 }
 
 #btn-add {
-  background-color: var(--violetBlue);
+  background-color: var(--main-color);
   margin-left: 3rem;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 1rem;
   font-size: 1.5rem;
   font-weight: bolder;
   color: white;
@@ -85,30 +101,39 @@ h3 {
 }
 
 #btn-add:hover {
-  background-color: var(--pictonBlue);
+  background-color: var(--blackChoclate);
 }
 
 #btn-add:active {
-  background-color: var(--pictonBlue);
+  background-color: var(--blackChoclate);
   box-shadow: 0 0 0 0;
   transform: translate(1.5rem, 0.5rem);
 }
 
 /* display comments styling */
 #show-comments {
-  background-color: var(--redOrange);
-  border: 1rem solid var(--violetBlue);
-  border-radius: 1rem;
-  padding: 2rem;
+  background-color: transparent;
+  padding: 1rem;
   visibility: hidden;
 }
 
 .all-items {
+  background-color: var(--second-color);
   display: flex;
   width: 75vw;
-  border: 1rem solid var(--deluge);
+  border: .5rem solid var(--main-color);
   padding: 3rem;
   margin-bottom: 1rem;
+  animation: opacityAnimation 1s ease-in;
+}
+
+@keyframes opacityAnimation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .div-img {
@@ -127,10 +152,13 @@ img {
 }
 
 .p-comment {
-  color: var(--fiord);
+  color: white;
+  width: auto;
+  height: auto;
   font-family: inherit;
   font-size: 2.5rem;
   font-weight: bolder;
+  overflow-y: scroll ;
 }
 
 .delete-btn {
@@ -147,11 +175,41 @@ img {
 }
 
 .delete-btn:hover {
-  background-color: var(--pictonBlue);
+  background-color: var(--blackChoclate);
 }
 
 .delete-btn:active {
-  background-color: var(--pictonBlue);
+  background-color: var(--blackChoclate);
   box-shadow: 0 0 0 0;
   transform: translate(0.5rem, 0.5rem);
+}
+
+@media screen and (max-width:500px) {
+  .all-items {
+    padding: 1rem
+  }
+  .input-user{
+    height: 15vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #btn-add {
+    margin: 0;
+  }
+  img {
+    height: 50px;
+  }
+  .delete-btn {
+    padding: .5rem
+  }
+  .div-img{
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .p-comment{
+    font-size: 1.6rem;
+  }
 }
