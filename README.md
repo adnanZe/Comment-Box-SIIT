@@ -1,19 +1,13 @@
-# Comment-Box-SIIT
+# Comment Box
 
-# Challenge week 5
+:clipboard: Task:
 
-Task:
+:pushpin: Display comments.
 
-1. Se vor afisa comments.
+:pushpin: Add comments.
 
-2. Adaugarea de comment.
-
-3. Stergerea de comments.
-
-4. Explicatile le gasiti in pdf atasat.
+:pushpin: Delete comments.
 
 ===========================================
 
-Preview:
-
-https://adnanze.github.io/Comment-Box-SIIT/
+:eyes: Preview :paperclip: https://adnanze.github.io/CommentBox/
